@@ -77,6 +77,8 @@ void capitilize(int fd_in,int fd_out) {
 }
 
 int main(int argc, char *argv[]) {
+  pid_t pid = getpid();
+
   command_line_options_t command_line_options{argc, argv};
   std::vector<int> fds;
   //open files 1 in R_ONLY mode and 2 in W_ONLY mode
